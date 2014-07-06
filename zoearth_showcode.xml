@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="2.5" method="upgrade">
-    <name>COM_Z2</name>
+    <name>PLG_ZOEARTH_SHOWCODE</name>
     <author>Zoearth</author>
-    <creationDate>2013-11-01</creationDate>
+    <creationDate>2014-07-06</creationDate>
     <copyright>Copyright (c)</copyright>
     <authorEmail>zoearthmoon@gmail.com</authorEmail>
-    <version>1.2.7</version>
-    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0.0</version>
     <description>
     <![CDATA[
     <div style="text-align:left">
         <blockquote>
-        <p>您好!這是zoearth 修改後的多語系版本K2，改為<h1>Z2</h1></p>
-        <small>請先安裝zh-TW語系檔再開始使用Z2<br>只能在joomla3.0以上使用<br></small>
+        <p>您好!這是zoearth 的編輯器外掛<h1>Zoearth ShowCode</h1></p>
+        <small>主要功能為使用<br>
+        google-code-prettify.googlecode.com/svn/loader/run_prettify.js 與
+        pre區塊的 class名稱prettyprint 來做配合
+        </small>
         </blockquote>
-        <dl class="dl-horizontal">
-        <dt>1.2.7版本</dt><dd>會員與群組功能</dd>
-        <dt>1.2.5版本</dt><dd>刪除原本K2不需要的程式功能，以減少記憶體消耗<br>把項目附加分類功能改為預設內的功能</dd>
-        <dt>1.1.0版本</dt><dd>簡化後台功能<br>項目與分類的輸入內容優化<br>優化縮圖方式...等等</dd>
-        <dt>1.0.0版本</dt><dd>完成多語系功能</dd>
-        </dl>
     </div>
     ]]>
     </description>
-    <installfile>install.z2.php</installfile>
-    <uninstallfile>uninstall.z2.php</uninstallfile>
-    <scriptfile>script.z2.php</scriptfile>
+    
     <install>
         <sql>
             <file driver="mysqli" charset="utf8">install.mysql.sql</file>
