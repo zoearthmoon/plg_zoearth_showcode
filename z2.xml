@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>COM_Z2</name>
+    <author>Zoearth</author>
+    <creationDate>2013-11-01</creationDate>
+    <copyright>Copyright (c)</copyright>
+    <authorEmail>zoearthmoon@gmail.com</authorEmail>
+    <version>1.2.7</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>
+    <![CDATA[
+    <div style="text-align:left">
+        <blockquote>
+        <p>您好!這是zoearth 修改後的多語系版本K2，改為<h1>Z2</h1></p>
+        <small>請先安裝zh-TW語系檔再開始使用Z2<br>只能在joomla3.0以上使用<br></small>
+        </blockquote>
+        <dl class="dl-horizontal">
+        <dt>1.2.7版本</dt><dd>會員與群組功能</dd>
+        <dt>1.2.5版本</dt><dd>刪除原本K2不需要的程式功能，以減少記憶體消耗<br>把項目附加分類功能改為預設內的功能</dd>
+        <dt>1.1.0版本</dt><dd>簡化後台功能<br>項目與分類的輸入內容優化<br>優化縮圖方式...等等</dd>
+        <dt>1.0.0版本</dt><dd>完成多語系功能</dd>
+        </dl>
+    </div>
+    ]]>
+    </description>
+    <installfile>install.z2.php</installfile>
+    <uninstallfile>uninstall.z2.php</uninstallfile>
+    <scriptfile>script.z2.php</scriptfile>
+    <install>
+        <sql>
+            <file driver="mysqli" charset="utf8">install.mysql.sql</file>
+            <file driver="mysql" charset="utf8">install.mysql.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysqli" charset="utf8">uninstall.mysql.sql</file>
+            <file driver="mysql" charset="utf8">uninstall.mysql.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="components/com_z2">
+        <folder>controllers</folder>
+        <folder>css</folder>
+        <folder>helpers</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>models</folder>
+        <folder>sef_ext</folder>
+        <folder>templates</folder>
+        <folder>views</folder>
+        <filename>z2.php</filename>
+        <filename>router.php</filename>
+    </files>
+    <media destination="z2" folder="media/z2">
+        <folder>z2load</folder>
+        <folder>assets</folder>
+        <folder>attachments</folder>
+        <folder>categories</folder>
+        <folder>galleries</folder>
+        <folder>items</folder>
+        <folder>users</folder>
+        <folder>videos</folder>
+    </media>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.com_z2.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_comments.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_comments.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_content.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_content.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_tools.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_tools.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_users.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_users.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_user.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_z2_user.sys.ini</language>
+        
+        <language tag="zh-TW">zh-TW/zh-TW.com_z2.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_comments.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_comments.sys.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_content.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_content.sys.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_tools.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_tools.sys.ini</language>
+        
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_menus.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_menus.sys.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_banners.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_banners.sys.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_related.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_related.sys.ini</language>
+                        
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_users.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_users.sys.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_user.ini</language>
+        <language tag="zh-TW">zh-TW/zh-TW.mod_z2_user.sys.ini</language>
+        
+        <language tag="zh-TW">zh-TW/zh-TW.com_z2_soptions.ini</language>
+    </languages>
+    <administration>
+        <menu img="../media/z2/assets/images/system/z2_16x16.png" view="items">COM_Z2</menu>
+        <submenu>
+            <menu view="items" link="option=com_z2&amp;view=items">Z2_ITEMS</menu>
+            <menu view="categories" link="option=com_z2&amp;view=categories">Z2_CATEGORIES</menu>
+            <menu view="tags" link="option=com_z2&amp;view=tags">Z2_TAGS</menu>
+            <!-- <menu view="comments" link="option=com_z2&amp;view=comments">Z2_COMMENTS</menu> -->
+            <menu view="usergroups" link="option=com_z2&amp;view=users">Z2_USERS</menu>
+            <menu view="usergroups" link="option=com_z2&amp;view=usergroups">Z2_USER_GROUPS</menu>
+            <menu view="extrafields" link="option=com_z2&amp;view=extrafields">Z2_EXTRA_FIELDS</menu>
+            <menu view="extrafieldgroups" link="option=com_z2&amp;view=extrafieldsgroups">Z2_EXTRA_FIELD_GROUPS</menu>
+            <menu view="sitemaps" link="option=com_z2&amp;view=sitemaps">Z2_SITEMAPS</menu>
+            <menu view="media" link="option=com_z2&amp;view=media&amp;clean=1">Z2_MEDIA_MANAGER</menu>
+            <menu view="info" link="option=com_z2&amp;view=info">Z2_INFORMATION</menu>
+        </submenu>
+        <files folder="administrator/components/com_z2">
+            <folder>controllers</folder>
+            <folder>elements</folder>
+            <folder>helpers</folder>
+            <folder>jupgrade</folder>
+            <folder>lib</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <filename>access.xml</filename>
+            <filename>z2.php</filename>
+            <filename>config.xml</filename>
+            <filename>install.mysql.sql</filename>
+            <filename>uninstall.mysql.sql</filename>
+        </files>
+        <languages folder="administrator/language">
+            <language tag="en-GB">en-GB/en-GB.com_z2.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_z2.menu.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_z2.j16.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_z2_quickicons.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_z2_quickicons.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_z2_stats.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_z2_stats.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_z2.j16.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_search_z2.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_search_z2.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_z2.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_system_z2.sys.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_user_z2.ini</language>
+            <language tag="en-GB">en-GB/en-GB.plg_user_z2.sys.ini</language>
+            
+            <language tag="zh-TW">zh-TW/zh-TW.com_z2.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.com_z2.menu.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.com_z2.j16.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.mod_z2_quickicons.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.mod_z2_quickicons.sys.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.mod_z2_stats.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.mod_z2_stats.sys.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.mod_z2.j16.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.plg_search_z2.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.plg_search_z2.sys.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.plg_system_z2.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.plg_system_z2.sys.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.plg_user_z2.ini</language>
+            <language tag="zh-TW">zh-TW/zh-TW.plg_user_z2.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields>
+            <fieldset>
+                <!-- ######################### CSS Settings ######################### -->
+                <field name="enable_css" default="1" />
+                <field name="jQueryHandling" default="1.8remote" />
+                <field name="backendJQueryHandling" default="remote" />
+                <!-- ######################### Layout and view options for user (blog/profile) pages ######################### -->
+                <field name="userName" default="1" />
+                <field name="userImage" default="1" />
+                <field name="userDescription" default="1" />
+                <field name="userURL" default="1" />
+                <field name="userEmail" default="0" />
+                <field name="userFeedLink" default="1" />
+                <field name="userFeedIcon" default="1" />
+                <field name="userItemCount" default="10" />
+                <field name="userItemTitle" default="1" />
+                <field name="userItemTitleLinked" default="1" />
+                <field name="userItemDateCreated" default="1" />
+                <field name="userItemImage" default="1" />
+                <field name="userItemIntroText" default="1" />
+                <field name="userItemCategory" default="1" />
+                <field name="userItemTags" default="1" />
+                <field name="userItemCommentsAnchor" default="1" />
+                <field name="userItemReadMore" default="1" />
+                <field name="userItemZ2Plugins" default="1" />
+                <!-- ######################### Layout and view options for Tag listings ######################### -->
+                <field name="tagItemCount" default="10" />
+                <field name="tagItemTitle" default="1" />
+                <field name="tagItemTitleLinked" default="1" />
+                <field name="tagItemDateCreated" default="1" />
+                <field name="tagItemImage" default="1" />
+                <field name="tagItemIntroText" default="1" />
+                <field name="tagItemCategory" default="1" />
+                <field name="tagItemReadMore" default="1" />
+                <field name="tagItemExtraFields" default="0" />
+                <field name="tagOrdering" default="" />
+                <field name="tagFeedLink" default="1" />
+                <field name="tagFeedIcon" default="1" />
+                <!-- ######################### Layout and view options for Search and Date listings ######################### -->
+                <field name="genericItemCount" default="10" />
+                <field name="genericItemTitle" default="1" />
+                <field name="genericItemTitleLinked" default="1" />
+                <field name="genericItemDateCreated" default="1" />
+                <field name="genericItemImage" default="1" />
+                <field name="genericItemIntroText" default="1" />
+                <field name="genericItemCategory" default="1" />
+                <field name="genericItemReadMore" default="1" />
+                <field name="genericItemExtraFields" default="0" />
+                <field name="genericFeedLink" default="1" />
+                <field name="genericFeedIcon" default="1" />
+                <!-- ######################### RSS Feed Settings ######################### -->
+                <field name="feedLimit" default="10" />
+                <field name="feedItemImage" default="1" />
+                <field name="feedImgSize" default="S" />
+                <field name="feedItemIntroText" default="1" />
+                <field name="feedTextWordLimit" default="" />
+                <field name="feedItemFullText" default="1" />
+                <field name="feedItemTags" default="0" />
+                <field name="feedItemVideo" default="0" />
+                <field name="feedItemGallery" default="0" />
+                <field name="feedItemAttachments" default="0" />
+                <field name="feedBogusEmail" default="" />
+                <!-- ######################### Content Cleanup Settings ######################### -->
+                <field name="introTextCleanup" default="0" />
+                <field name="introTextCleanupExcludeTags" default="" />
+                <field name="introTextCleanupTagAttr" default="" />
+                <field name="fullTextCleanup" default="0" />
+                <field name="fullTextCleanupExcludeTags" default="" />
+                <field name="fullTextCleanupTagAttr" default="" />
+                <field name="xssFiltering" default="0" />
+                <!-- ######################### Extra Fields Settings ######################### -->
+                <field name="linkPopupWidth" default="900" />
+                <field name="linkPopupHeight" default="600" />
+                <!-- ######################### Image Settings ######################### -->
+                <field name="imagesQuality" default="100" />
+                <field name="itemImageXS" default="100" />
+                <field name="itemImageS" default="200" />
+                <field name="itemImageM" default="400" />
+                <field name="itemImageL" default="600" />
+                <field name="itemImageXL" default="900" />
+                <field name="itemImageGeneric" default="300" />
+                <field name="catImageWidth" default="100" />
+                <field name="catImageDefault" default="1" />
+                <field name="userImageWidth" default="100" />
+                <field name="userImageDefault" default="1" />
+                <field name="commenterImgWidth" default="48" />
+                <field name="onlineImageEditor" default="splashup" />
+                <field name="imageTimestamp" default="0" />
+                <field name="imageMemoryLimit" default="" />
+                <!-- ######################### Social Settings ######################### -->
+                <field name="socialButtonCode" default="" />
+                <field name="twitterUsername" default="" />
+                <field name="facebookImage" default="Medium" />
+                <!-- ######################### Comments ######################### -->
+                <field name="comments" default="1" />
+                <field name="commentsOrdering" default="DESC" />
+                <field name="commentsLimit" default="10" />
+                <field name="commentsFormPosition" default="below" />
+                <field name="commentsPublishing" default="1" />
+                <field name="commentsReporting" default="2" />
+                <field name="commentsReportRecipient" default="" />
+                <field name="inlineCommentsModeration" default="0" />
+                <field name="recaptchaForRegistered" default="1" />
+                <field name="gravatar" default="1" />
+                <field name="recaptcha" default="0" />
+                <field name="commentsFormNotes" default="1" />
+                <field name="commentsFormNotesText" default="" />
+                <!-- ######################### Frontend Editing ######################### -->
+                <field name="frontendEditing" default="1" />
+                <field name="showImageTab" default="1" />
+                <field name="showImageGalleryTab" default="1" />
+                <field name="showVideoTab" default="1" />
+                <field name="showExtraFieldsTab" default="1" />
+                <field name="showAttachmentsTab" default="1" />
+                <field name="showZ2Plugins" default="1" />
+                <field name="sideBarDisplayFrontend" default="0" />
+                <!-- ######################### Advanced Settings ######################### -->
+                <field name="mergeEditors" default="1" />
+                <field name="sideBarDisplay" default="1" />
+                <field name="attachmentsFolder" default="" />
+                <field name="hideImportButton" default="0" />
+                <field name="googleSearch" default="0" />
+                <field name="googleSearchContainer" default="z2GoogleSearchContainer" />
+                <field name="Z2UserProfile" default="1" />
+                <field name="Z2UserGroup" default="" />
+                <field name="redirect" default="" />
+                <field name="adminSearch" default="simple" />
+                <field name="cookieDomain" default="" />
+                <!-- ######################### Tag System Settings ######################### -->
+                <field name="taggingSystem" default="1" />
+                <field name="lockTags" default="0" />
+                <field name="showTagFilter" default="0" />
+                <field name="z2TagNorm" default="0" />
+                <field name="z2TagNormCase" default="lower" />
+                <field name="z2TagNormAdditionalReplacements" default="" />
+                <!-- ######################### Anti-spam Settings ######################### -->
+                <field name="recaptcha_public_key" default="" />
+                <field name="recaptcha_private_key" default="" />
+                <field name="recaptcha_theme" default="clean" />
+                <field name="recaptchaOnRegistration" default="0" />
+                <field name="stopForumSpam" default="0" />
+                <field name="stopForumSpamApiKey" default="" />
+                <!-- ######################### Performance Settings ######################### -->
+                <field name="showItemsCounterAdmin" default="1" />
+                <field name="showChildCatItems" default="1" />
+                <field name="disableCompactOrdering" default="0" />
+                <!-- ######################### SEO Settings ######################### -->
+                <field name="metaDescLimit" default="150" />
+                <field name="enforceSEFReplacements" default="0" />
+                <field name="SEFReplacements" default="" />
+                <!-- ######################### Advanced SEF Settings ######################### -->
+                <field name="z2Sef" default="0" />
+                <field name="z2SefLabelCat" default="content" />
+                <field name="z2SefLabelTag" default="tag" />
+                <field name="z2SefLabelUser" default="author" />
+                <field name="z2SefLabelSearch" default="search" />
+                <field name="z2SefLabelDate" default="date" />
+                <field name="z2SefLabelItem" default="0" />
+                <field name="z2SefLabelItemCustomPrefix" default="" />
+                <field name="z2SefInsertItemId" default="1" />
+                <field name="z2SefItemIdTitleAliasSep" default="dash" />
+                <field name="z2SefUseItemTitleAlias" default="1" />
+                <field name="z2SefInsertCatId" default="1" />
+                <field name="z2SefCatIdTitleAliasSep" default="dash" />
+                <field name="z2SefUseCatTitleAlias" default="1" />
+                <!-- ######################### sh404SEF Settings ######################### -->
+                <field name="sh404SefLabelCat" default="" />
+                <field name="sh404SefLabelUser" default="blog" />
+                <field name="sh404SefLabelItem" default="2" />
+                <field name="sh404SefTitleAlias" default="alias" />
+                <field name="sh404SefModZ2ContentFeedAlias" default="feed" />
+                <field name="sh404SefInsertItemId" default="0" />
+                <field name="sh404SefInsertUniqueItemId" default="0" />
+                <field name="cbIntegration" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <modules>
+        <module module="mod_z2_content" client="site" />
+        <module module="mod_z2_tools" client="site" />
+        <module module="mod_z2_menus" client="site" />
+        
+        <module module="mod_z2_banners" client="site" />
+        <module module="mod_z2_related" client="site" />
+        
+    </modules>
+    <plugins>
+        <plugin plugin="z2" group="search" />
+        <plugin plugin="z2" group="system" />
+        <plugin plugin="z2" group="user" />
+    </plugins>
+    <joomfish>
+        <file>z2_attachments.xml</file>
+        <file>z2_categories.xml</file>
+        <file>z2_extra_fields.xml</file>
+        <file>z2_items.xml</file>
+        <file>z2_tags.xml</file>
+        <file>z2_users.xml</file>
+    </joomfish>
+</extension>
