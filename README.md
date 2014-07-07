@@ -1,6 +1,3 @@
-tpl_zoearthblog_01
-==================
-
 <p>您好!這是zoearth 的編輯器外掛<h1>Zoearth ShowCode</h1></p>
 <small>主要功能為使用
 <br>google-code-prettify.googlecode.com/svn/loader/run_prettify.js 與
