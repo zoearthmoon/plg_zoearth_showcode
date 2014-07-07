@@ -1,39 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
-    <name>Button - Custom Text</name>
-    <author>aras</author>
-    <creationDate>October 2013</creationDate>
-    <copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
-    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-    <authorEmail>info@mysysadmintips.com</authorEmail>
-    <authorUrl>www.mysysadmintips.com</authorUrl>
-    <version>1.4</version>
-    <description>Custom Text Button v1.4. Adds editor button that allows to insert any predefined text into articles. Don't forget to publish the plugin and set your text in plugin parameters</description>
-    <files>
-        <filename plugin="customtext">customtext.php</filename>
-        <filename>index.html</filename>
-    </files>
-	<config>
-	<fields name="params">
-		<fieldset name="basic">
-		<field
-			name="custom_text"
-			type="text"
-			filter="raw"
-			default=""
-			label="Custom Text"
-			description="Enter your custom text"
-			size="50" />
-		<field
-			name="label"
-			type="text"
-			default="Custom Text"
-			label="Button Label"
-			description="Enter label text for the button"
-			maxlength="15"
-			size="10" />
-		</fieldset>
-		
-	</fields>
-	</config>
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+    <name>Zoearth ShowCode Btn</name>
+    <author>zoearthmoon@gmail.com</author>
+    <creationDate>2014-07-07</creationDate>
+    <copyright>Copyright (C) 2014 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU3</license>
+    <authorEmail>zoearthmoon@gmail.com</authorEmail>
+    <authorUrl>www.zoearthmoon.net</authorUrl>
+    <version>1.0</version>
+    <description>
+    <![CDATA[
+    <div style="text-align:left">
+        <blockquote>
+        <p>您好!這是zoearth 的編輯器外掛<h1>Zoearth ShowCode</h1></p>
+        <small>主要功能為使用
+        <br>google-code-prettify.googlecode.com/svn/loader/run_prettify.js 與
+        <br>pre區塊的 class名稱prettyprint 來做配合
+        <br>請開啟 plg_zoearth_showcode 外掛才能正常運作!
+        <br>Please open plg_zoearth_showcode plugin to work properly!
+        <br>使用上有問題可以至<a href="http://www.zoearthmoon.net" target="_blank">www.zoearthmoon.net</a>詢問!感恩!
+        <br>There are questions you can use to <a href="http://www.zoearthmoon.net" target="_blank">www.zoearthmoon.net</a> ask! Thanks!
+        </small>
+        </blockquote>
+    </div>
+    ]]>
+    </description>
+    <files>
+        <filename plugin="zoearth_showcode_btn">zoearth_showcode_btn.php</filename>
+    </files>
+	<config>
+	</config>
 </extension>
