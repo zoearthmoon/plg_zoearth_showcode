@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="2.5" type="plugin" group="system" method="upgrade">
-    <name>System - Z2</name>
-    <author>Zoearth</author>
-    <creationDate>2013-11-01</creationDate>
-    <copyright>Copyright (c)</copyright>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+    <name>Zoearth ShowCode</name>
+    <author>zoearthmoon@gmail.com</author>
+    <creationDate>2014-07-07</creationDate>
+    <copyright>Copyright (C) 2014 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU3</license>
     <authorEmail>zoearthmoon@gmail.com</authorEmail>
-    <authorUrl></authorUrl>
-    <version>2.6.7</version>
-    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-    <description>Z2_THE_Z2_SYSTEM_PLUGIN_IS_USED_TO_ASSIST_THE_PROPER_FUNCTIONALITY_OF_THE_Z2_COMPONENT_SITE_WIDE_MAKE_SURE_ITS_ALWAYS_PUBLISHED_WHEN_THE_Z2_COMPONENT_IS_INSTALLED</description>
+    <authorUrl>www.zoearthmoon.net</authorUrl>
+    <version>1.0</version>
+    <description>
+    <![CDATA[
+    <div style="text-align:left">
+        <blockquote>
+        <p>您好!這是zoearth 的編輯器外掛<h1>Zoearth ShowCode</h1></p>
+        <small>主要功能為使用
+        <br>google-code-prettify.googlecode.com/svn/loader/run_prettify.js 與
+        <br>pre區塊的 class名稱prettyprint 來做配合
+        <br>請開啟 plg_zoearth_showcode_btn 外掛才能正常運作!
+        <br>Please open plg_zoearth_showcode_btn plugin to work properly!
+        <br>使用上有問題可以至<a href="http://www.zoearthmoon.net" target="_blank">www.zoearthmoon.net</a>詢問!感恩!
+        <br>There are questions you can use to <a href="http://www.zoearthmoon.net" target="_blank">www.zoearthmoon.net</a> ask! Thanks!
+        </small>
+        </blockquote>
+    </div>
+    ]]>
+    </description>
     <files>
-        <filename plugin="z2">z2.php</filename>
+        <filename plugin="zoearth_showcode">zoearth_showcode.php</filename>
     </files>
+    <config>
+    </config>
 </extension>
