@@ -24,6 +24,8 @@ class plgButtonZoearth_ShowCode_Btn extends JPlugin
 			jQuery("#zoearthCodeInput").click(function(){
 				var editorName = jQuery.data(document.body,"editorName");
 				var showCodeContent = jQuery("#showCodeContent").val().trim();
+				showCodeContent = showCodeContent.replace(/\</g,"&lt;");
+				showCodeContent = showCodeContent.replace(/\>/g,"&gt;");
 				showCodeContent = '<pre class="codeblock prettyprint" style="background-color: #f0f0f0;">'+showCodeContent+'</pre><br>';
 				jInsertEditorText(showCodeContent, editorName);
 				jQuery('#showCodeInputModal').modal('hide');
