@@ -28,6 +28,12 @@
     <files>
         <filename plugin="zoearth_showcode_btn">zoearth_showcode_btn.php</filename>
     </files>
+    <languages>
+        <language tag="zh-TW">zh-TW.plg_zoearth_showcode_btn.ini</language>
+		<language tag="zh-CN">zh-CN.plg_zoearth_showcode_btn.ini</language>
+		<language tag="ja-JP">ja-JP.plg_zoearth_showcode_btn.ini</language>
+		<language tag="en-GB">en-GB.plg_zoearth_showcode_btn.ini</language>
+    </languages>
 	<config>
 	</config>
 </extension>

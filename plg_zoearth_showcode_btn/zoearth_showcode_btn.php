@@ -7,6 +7,8 @@ class plgButtonZoearth_ShowCode_Btn extends JPlugin
     {
 		static $showed;
 		if (!$showed):
+		$lang = JFactory::getLanguage();
+		$lang->load('plg_zoearth_showcode_btn',JPATH_ADMINISTRATOR);
 		?>
 		<script language="Javascript">
 		var showCodeInput = function (editorName){
@@ -48,8 +50,9 @@ class plgButtonZoearth_ShowCode_Btn extends JPlugin
         $button = new JObject();				
 		$button->modal = FALSE;
 		$button->class = 'btn';
+		$button->title = JText::_('PLG_ZOEARTH_SHOW_CODE_BTN');
         $button->text = JText::_('PLG_ZOEARTH_SHOW_CODE_BTN');
-        $button->name = 'ZoearthShowCode Name';
+        $button->name = 'comment';
         $button->onclick = 'showCodeInput(\''.$name.'\');return false;';
         $button->link = '#';
         return $button;
