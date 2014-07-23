@@ -17,7 +17,7 @@ class plgSystemZoearth_ShowCode extends JPlugin
 			$addText = '
 <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 <style type="text/css">
-.post .codeblock {
+.codeblock {
 	display: block; /* fixes a strange ie margin bug */
 	font-family: Courier New;
 	font-size: 10pt;
