@@ -5,10 +5,13 @@ class plgButtonZoearth_ShowCode_Btn extends JPlugin
 {
     public function onDisplay($name)
     {
+		static $showed;
+		if (!$showed):
 		?>
 		<script language="Javascript">
-		var showCodeInput = function (){
-			jQuery('#showCodeInputModal').modal('show');
+		var showCodeInput = function (editorName){
+			jQuery.data(document.body,"editorName",editorName);
+			jQuery('#showCodeInputModal').modal('show');			
 		};
 		jQuery(document).ready(function() {
 			jQuery('#showCodeInputModal').on('show',function (){
@@ -17,13 +20,12 @@ class plgButtonZoearth_ShowCode_Btn extends JPlugin
 			});
 			//儲存
 			jQuery("#zoearthCodeInput").click(function(){
+				var editorName = jQuery.data(document.body,"editorName");
 				var showCodeContent = jQuery("#showCodeContent").val().trim();
 				showCodeContent = '<pre class="prettyprint" style="background-color: #c0c0c0;">'+showCodeContent+'</pre><br>';
-				jInsertEditorText(showCodeContent, 'jform_articletext');
+				jInsertEditorText(showCodeContent, editorName);
 				jQuery('#showCodeInputModal').modal('hide');
 			});
-			
-			
 		});
 		</script>
 		<div id="showCodeInputModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -40,12 +42,15 @@ class plgButtonZoearth_ShowCode_Btn extends JPlugin
 			</div>
 		</div>
 		<?php
+		$showed = TRUE;
+		endif;
+		
         $button = new JObject();				
 		$button->modal = FALSE;
 		$button->class = 'btn';
         $button->text = JText::_('PLG_ZOEARTH_SHOW_CODE_BTN');
         $button->name = 'ZoearthShowCode Name';
-        $button->onclick = 'showCodeInput();return false;';
+        $button->onclick = 'showCodeInput(\''.$name.'\');return false;';
         $button->link = '#';
         return $button;
     }
