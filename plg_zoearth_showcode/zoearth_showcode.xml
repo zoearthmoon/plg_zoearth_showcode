@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="plugin" group="system" method="upgrade">
-    <name>Zoearth ShowCode</name>
+    <name>plg_zoearth_showcode</name>
     <author>zoearthmoon@gmail.com</author>
     <creationDate>2014-07-07</creationDate>
     <copyright>Copyright (C) 2014 Open Source Matters. All rights reserved.</copyright>
